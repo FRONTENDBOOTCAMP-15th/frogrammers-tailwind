@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>헤더,네브,배너</title>
+    <link rel="stylesheet" href="./headerNavBanner.css" />
+    <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="font-Pretendard">
+    <h1 class="sr-only">헤더,네브,배너</h1>
+
+    <!-- Header 영역 -->
+    <header class="nav-header bg-ut-primary h-16 text-ut-secondary">
+      <div class="header-wrapper flex items-center grow py-3 px-6 max-w-[1408px] mx-auto utDesktop:px-16 utDesktop:py-3">
+        <!-- 로고 svg -->
+        <a href="/" class="header-logo leading-none utDesktop:mr-6" title="홈으로 이동">
+          <svg aria-label="UT" width="39" height="39" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M31.7203 14.1218H26.52V29.9667H31.7203V14.1218Z" fill="url(#paint0_linear_76873_1028)" />
+            <path d="M39 9.52222H19.2402V14.1227H39V9.52222Z" fill="url(#paint1_linear_76873_1028)" />
+            <path d="M14.04 9.52222V25.8773H5.20026V9.52222H0V21.7893C0 27.3343 4.04976 30.4785 9.61974 30.4785C15.1897 30.4785 19.2395 27.3343 19.2395 21.7893V9.52222H14.04Z" fill="white" />
+            <defs>
+              <linearGradient id="paint0_linear_76873_1028" x1="29.12" y1="30.0819" x2="29.12" y2="14.4964" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#EF5394" />
+                <stop offset="0.65" stop-color="#8B52A0" />
+                <stop offset="1" stop-color="#5D4EA1" />
+              </linearGradient>
+              <linearGradient id="paint1_linear_76873_1028" x1="19.3658" y1="11.822" x2="38.9941" y2="11.822" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#65C081" />
+                <stop offset="0.0637" stop-color="#62B68B" />
+                <stop offset="0.2224" stop-color="#5AA49E" />
+                <stop offset="0.3821" stop-color="#5495AB" />
+                <stop offset="0.5406" stop-color="#5089B3" />
+                <stop offset="0.6972" stop-color="#4D80B8" />
+                <stop offset="0.8513" stop-color="#4B7BBB" />
+                <stop offset="1" stop-color="#497ABD" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </a>
+
+        <!-- Nav 영역 -->
+        <nav class="hidden utDesktop:flex utDesktop:grow">
+          <ul class="menu-wrapper utDesktop:flex items-center gap-1">
+            <li class="inline-flex items-center">
+              <a href="#" class="py-1 px-2">기업정보</a>
+              <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 9L12 15L6 9" stroke="white" stroke-width="2" />
+              </svg>
+            </li>
+            <li><a href="#" class="py-1 px-2">안전</a></li>
+            <li><a href="#" class="py-1 px-2">고객지원</a></li>
+            <li><a href="#" class="py-1 px-2">차량 서비스</a></li>
+            <li class="inline-flex items-center">
+              <a href="#" class="py-1 px-2">기사지원</a>
+              <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 9L12 15L6 9" stroke="white" stroke-width="2" />
+              </svg>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- 언어 변경 -->
+        <div class="nav-language hidden utDesktop:flex ml-auto mr-3 gap-1">
+          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.5 6L18.0333 7.1C17.6871 7.35964 17.2661 7.5 16.8333 7.5H13.475C12.8775 7.5 12.3312 7.83761 12.064 8.37206V8.37206C11.7342 9.03161 11.9053 9.83161 12.476 10.2986L14.476 11.9349C16.0499 13.2227 16.8644 15.22 16.6399 17.2412L16.6199 17.4206C16.5403 18.1369 16.3643 18.8392 16.0967 19.5083L15.5 21" stroke="white" />
+            <path d="M2.5 10.5L5.7381 9.96032C7.09174 9.73471 8.26529 10.9083 8.03968 12.2619L7.90517 13.069C7.66434 14.514 8.3941 15.9471 9.70437 16.6022V16.6022C10.7535 17.1268 11.2976 18.3097 11.0131 19.4476L10.5 21.5" stroke="white" />
+            <circle cx="12" cy="12" r="9.5" stroke="white" />
+          </svg>
+
+          <select name="language" id="language" class="lang-select appearance-none font-bold" aria-label="언어">
+            <option value="KO-KR" class="text-ut-contentPrimary">KO-KR</option>
+            <option value="EN" class="text-ut-contentPrimary">EN</option>
+          </select>
+        </div>
+        <!-- 가입 버튼 -->
+        <a class="header-signup-btn ml-auto px-3 py-2 bg-ut-secondary text-ut-primary rounded-[1.375rem] font-bold shrink-0 hover:bg-gray-200 utDesktop:ml-0" href="/">가입하기</a>
+
+        <!-- 햄버거 메뉴 -->
+        <button class="hamburger-menu ml-3 utDesktop:hidden" aria-label="메뉴 열기">
+          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 10L6 10" stroke="white" stroke-width="2" stroke-linecap="round" />
+            <path d="M18 14L6 14" stroke="white" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- 메인 섹션 배너 영역 -->
+    <section class="banner-section h-64 bg-[url('./assets/bannerImageMobile.svg')] bg-cover bg-no-repeat utTablet:bg-[url('./assets/bannerImageTablet.svg')] utDesktop:bg-[url('./assets/bannerImageDesktop.svg')] utTablet:h-90 bg-right bg-center utDesktop:h-100">
+      <article class="px-6 py-10 text-ut-primary max-w-7xl utTablet:px-8 utTablet:py-14 utDesktop:max-w-7xl utDesktop:mx-auto utDesktop:p-16">
+        <h2 class="text-3xl font-bold utTablet:text-4xl utDesktop:text-5xl">우리들의 택시, UT</h2>
+        <p class="my-7 font-medium">UT로 안전하고 편안한 차량 서비스를 이용하세요.</p>
+        <div class="banner-app-download flex px-6 py-4 gap-1 bg-ut-primary text-ut-secondary w-38 justify-center">
+          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.29289 9.70711L11.2929 14.7071L12 15.4142L12.7071 14.7071L17.7071 9.70711L16.2929 8.29289L13 11.5858V4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H11L11 11.5858L7.70711 8.29289L6.29289 9.70711Z" fill="white" />
+          </svg>
+          <a href="/" target="_blank" rel="noopener noreferrer">앱 다운로드</a>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>

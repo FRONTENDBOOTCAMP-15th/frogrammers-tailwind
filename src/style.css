@@ -1,1 +1,95 @@
-/* CSS 스타일을 작성해 주세요. */ 
+@import 'tailwindcss';
+
+:root {
+  /* Color */
+  --primary: #0075ff;
+  --secondary: #ffffff;
+  --tertiary: #f5f5f5;
+  --accent: #276ef1;
+  --negative: #e11900;
+  --warning: #ffc043;
+  --positive: #048848;
+
+  --contentPrimary: #000000;
+  --contentSecondary: #6b6b6b;
+  --contentTertiary: #a6a6a6;
+
+  --borderTransparent: #898989;
+  --borderOpaque: #898989;
+  --positiveTransparent: rgba(4, 136, 72, 0.1);
+  --negativeTransparent: rgba(225, 25, 0, 0.1);
+
+  /* font */
+  --base-font-family: 'Pretendard Variable', sans-serif;
+}
+
+@theme {
+  /* Color 변수 정의 */
+  --color-ut-primary: var(--primary);
+  --color-ut-secondary: var(--secondary);
+  --color-ut-tertiary: var(--tertiary);
+  --color-ut-accent: var(--accent);
+  --color-ut-negative: var(--negative);
+  --color-ut-warning: var(--warning);
+  --color-ut-positive: var(--positive);
+
+  --color-ut-contentPrimary: var(--contentPrimary);
+  --color-ut-contentSecondary: var(--contentSecondary);
+  --color-ut-contentTertiary: var(--contentTertiary);
+
+  --color-ut-borderTransparent: var(--borderTransparent);
+  --color-ut-borderOpaque: var(--borderOpaque);
+  --color-ut-positiveTransparent: var(--positiveTransparent);
+  --color-ut-negativeTransparent: var(--negativeTransparent);
+
+  /* 웹 폰트(Pretendard) 사용자 정의 */
+  --font-Pretendard: 'Pretendard Variable', sans-serif;
+
+  /* 브레이크포인트 */
+  --breakpoint-utTablet: 31.3125rem;
+  --breakpoint-utDesktop: 53.1875rem;
+}
+
+@layer components {
+  summary {
+    @apply font-semibold [list-style:none] flex items-center px-5 py-4;
+
+    &::after {
+      @apply content-[url(../assets/plus.svg)] ml-auto;
+    }
+  }
+
+  details[open] summary::after {
+    @apply content-[url(../assets/minus.svg)];
+  }
+
+  .details-wrapper {
+    @apply p-6;
+
+    p,
+    ol,
+    ul {
+      @apply mb-6 leading-normal;
+    }
+
+    ul {
+      @apply [list-style:disc] ml-5;
+    }
+
+    li {
+      @apply ml-1.5;
+    }
+
+    a {
+      @apply font-semibold no-underline text-ut-contentPrimary;
+    }
+
+    hr {
+      @apply h-[0.0625rem] border-none bg-ut-borderTransparent;
+    }
+  }
+
+  hr {
+    @apply h-[0.0625rem] border-none bg-ut-contentTertiary;
+  }
+}
