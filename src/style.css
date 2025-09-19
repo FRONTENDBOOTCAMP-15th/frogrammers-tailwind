@@ -76,6 +76,10 @@
       @apply [list-style:disc] ml-5;
     }
 
+    li {
+      @apply ml-1.5;
+    }
+
     a {
       @apply font-semibold no-underline text-ut-contentPrimary;
     }
