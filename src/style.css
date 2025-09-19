@@ -49,3 +49,47 @@
   --breakpoint-utTablet: 31.3125rem;
   --breakpoint-utDesktop: 53.1875rem;
 }
+
+@layer components {
+  summary {
+    @apply font-semibold [list-style:none] flex items-center px-5 py-4;
+
+    &::after {
+      @apply content-[url(../assets/plus.svg)] ml-auto;
+    }
+  }
+
+  details[open] summary::after {
+    @apply content-[url(../assets/minus.svg)];
+  }
+
+  .details-wrapper {
+    @apply p-6;
+
+    p,
+    ol,
+    ul {
+      @apply mb-6 leading-normal;
+    }
+
+    ul {
+      @apply [list-style:disc] ml-5;
+    }
+
+    li {
+      @apply ml-1.5;
+    }
+
+    a {
+      @apply font-semibold no-underline text-ut-contentPrimary;
+    }
+
+    hr {
+      @apply h-[0.0625rem] border-none bg-ut-borderTransparent;
+    }
+  }
+
+  hr {
+    @apply h-[0.0625rem] border-none bg-ut-contentTertiary;
+  }
+}
