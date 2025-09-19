@@ -55,12 +55,12 @@
     @apply font-semibold [list-style:none] flex items-center px-5 py-4;
 
     &::after {
-      @apply content-[url(../assets/plus.svg)] ml-auto;
+      @apply content-[url(./assets/plus.svg)] ml-auto;
     }
   }
 
   details[open] summary::after {
-    @apply content-[url(../assets/minus.svg)];
+    @apply content-[url(./assets/minus.svg)];
   }
 
   .details-wrapper {
