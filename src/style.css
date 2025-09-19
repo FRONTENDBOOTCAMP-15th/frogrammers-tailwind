@@ -44,4 +44,8 @@
 
   /* 웹 폰트(Pretendard) 사용자 정의 */
   --font-Pretendard: 'Pretendard Variable', sans-serif;
+
+  /* 브레이크포인트 */
+  --breakpoint-utTablet: 31.3125rem;
+  --breakpoint-utDesktop: 53.1875rem;
 }
